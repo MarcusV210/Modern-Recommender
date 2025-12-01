@@ -9,7 +9,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  
   // Load CSV
   useEffect(() => {
     Papa.parse("/ElectronicsData.csv", {
@@ -79,7 +79,7 @@ Example:
     const jsonMatch = aiText.match(/\[.*\]/s);
 
     if (!jsonMatch) {
-      setError("AI did not return a recognizable list.");
+      setError("Model did not return a recognizable list.");
       setLoading(false);
       return;
     }
@@ -87,7 +87,7 @@ Example:
     const names = JSON.parse(jsonMatch[0]);
 
     const filtered = products.filter((p) => names.includes(p.Title));
-
+    console.log("API Key:", import.meta.env.VITE_OPENROUTER_API_KEY);
     setRecommendations(filtered);
 
   } catch (error) {
