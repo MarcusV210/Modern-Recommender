@@ -57,7 +57,7 @@ Example:
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+          "Authorization": `Bearer ${process.env.REACT_APP_OPENROUTER_API_KEY}`,
           "HTTP-Referer": window.location.origin,
           "X-Title": "AI Product Recommender"
         },
