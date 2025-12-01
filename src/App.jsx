@@ -76,7 +76,6 @@ Example:
 
     let aiText = data.choices[0].message.content.trim();
 
-    // 🔥 FIX: Extract JSON array even if model adds extra text
     const jsonMatch = aiText.match(/\[.*\]/s);
 
     if (!jsonMatch) {
@@ -116,9 +115,6 @@ Example:
   );
 }
 
-//
-// Dark mode styles
-//
 const styles = {
   container: {
     display: "flex",
@@ -138,7 +134,7 @@ const styles = {
   rightPane: {
     width: "50%",
     padding: 20,
-    overflowY: "scroll",    // <-- ADD THIS
+    overflowY: "scroll", 
     height: "100vh",
     backgroundColor: "#121212"
   },

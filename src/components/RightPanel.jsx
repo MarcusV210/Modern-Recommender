@@ -15,7 +15,7 @@ export default function RightPanel({
 
       <textarea
         style={styles.textBox}
-        placeholder="Describe what you want (e.g., best phone under $500)"
+        placeholder="Describe what you want (Eg. best phone under $500)"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
