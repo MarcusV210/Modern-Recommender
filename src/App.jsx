@@ -56,7 +56,7 @@ Example:
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
-          "HTTP-Referer": "http://localhost:3000",
+          "HTTP-Referer": window.location.origin,
           "X-Title": "AI Product Recommender"
         },
         body: JSON.stringify({
