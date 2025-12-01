@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
 import LeftPanel from "./components/LeftPanel";
 import RightPanel from "./components/RightPanel";
+console.log("API KEY:", import.meta.env.VITE_OPENROUTER_API_KEY);
 
 function App() {
   const [error, setError] = useState("");
@@ -87,7 +88,7 @@ Example:
     const names = JSON.parse(jsonMatch[0]);
 
     const filtered = products.filter((p) => names.includes(p.Title));
-    console.log("API Key:", import.meta.env.VITE_OPENROUTER_API_KEY);
+    // console.log("API Key:", import.meta.env.VITE_OPENROUTER_API_KEY);
     setRecommendations(filtered);
 
   } catch (error) {
