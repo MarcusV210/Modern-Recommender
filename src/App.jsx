@@ -1,9 +1,9 @@
-console.log("APP LOADED");
+console.log("APP IS RUNNING");
+console.log("API KEY:", process.env.REACT_APP_OPENROUTER_API_KEY);
 import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
 import LeftPanel from "./components/LeftPanel";
 import RightPanel from "./components/RightPanel";
-console.log("API KEY:", import.meta.env.VITE_OPENROUTER_API_KEY);
 
 function App() {
   const [error, setError] = useState("");
