@@ -1,3 +1,4 @@
+console.log("APP LOADED");
 import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
 import LeftPanel from "./components/LeftPanel";
